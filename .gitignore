@@ -1,0 +1,30 @@
+# Ignore
+Notebook/EDA_Transformers_Analysis.ipynb
+
+# Ignore temporary Python files and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environment folders
+venv/
+.env/
+.venv/
+
+# Ignore log files
+*.log
+# Heavy model and training files
+*.pt
+*.bin
+*.safetensors
+*.pkl
+*.h5
+*.zip
+Notebook/results/
