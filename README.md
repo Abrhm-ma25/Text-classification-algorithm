@@ -2,7 +2,7 @@
 ## 🚀 Run on Google Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/github/<Abrhm-ma25>/<Text-classification-algorithm>/blob/main/<FT_Transformers_>.ipynb
+https://colab.research.google.com/github/Abrhm-ma25/Text-classification-algorithm/blob/main/FT_Transformers_.ipynb
 )
 
 
