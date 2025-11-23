@@ -87,8 +87,85 @@ Then open:
 ```bash
 FT_Transformers_.ipynb
 ```
+---
+## 4. Run the Gradio App Locally
 
-## 4. Contributors to the repository
+![Gradio App Interface](https://raw.githubusercontent.com/Abrhm-ma25/Text-classification-algorithm/main/Gradio%20local%20app%20interface.png)
+
+Clone the repository
+```bash
+git clone https://github.com/Abrhm-ma25/Text-classification-algorithm.git
+cd Text-classification-algorithm
+```
+
+Create a virtual environment
+
+Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+macOS / Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+This installs:
+
+transformers
+
+torch
+
+gradio
+
+pandas
+
+all other required libraries
+
+Ensure the model files are in the right folder
+
+```bash
+Text-classification-algorithm/Model/
+```
+The folder must contain:
+
+```bash
+config.json
+tokenizer.json
+tokenizer_config.json
+special_tokens_map.json
+vocab.json / merges.txt
+model.safetensors
+```
+In the root of the project folder, in the terminal run:
+
+```bash
+python app.py
+```
+You should see the local URL ex:
+
+```bash
+Running on local URL: http://127.0.0.1:7861
+```
+Just click or paste it in your browser
+
+You'll see:
+
+The single text prediction tab
+
+The CSV batch prediction tab
+
+---
+## 5. Contributors to the repository
 
 kevin.dallaporta@edu.dsti.institute
 
