@@ -1,73 +1,99 @@
+# Twitter Sentiment Analysis
 
-## 🚀 Run on Google Colab
+This repository contains a complete pipeline for fine-tuning transformer models on a sentiment analysis task using tweets.  
+Two architectures are trained and compared:
+
+- RoBERTa-base (encoder-only classifier)
+- T5-small (encoder-decoder text-to-text model)
+
+The goal is to identify the best model for identifying the sentiment expressed toward entities (such as people, organizations, or products) in Twitter posts, based on F1-score.
+
+---
+
+## 1. Run on Google Colab
+
+You can execute the full training notebook using the following link:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
 https://colab.research.google.com/github/Abrhm-ma25/Text-classification-algorithm/blob/main/FT_Transformers_.ipynb
 )
 
+---
 
-🧠 Twitter Entity Sentiment Analysis
-📄 Project Overview
+## 2. Project Overview
 
-This project aims to build a text classification model capable of identifying the sentiment expressed toward entities (such as people, organizations, or products) in Twitter posts.
+This project trains machine-learning models to classify tweets into:
 
-The dataset used is the Twitter Entity Sentiment Analysis dataset
-.
+- Positive  
+- Negative  
+- Neutral  
 
-We apply both traditional machine learning and state-of-the-art transformer models to compare performance and understand how modern NLP architectures improve sentiment prediction.
+The pipeline includes:
 
-📂 Repository Structure
-twitter-entity-sentiment-analysis/
-│
-├── data/
-│   └── twitter_training.csv        # Training data
-│   └── twitter_validation.csv      # Validation data
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb   # EDA and preprocessing
-│   ├── 02_baseline_model.ipynb     # TF-IDF + Logistic Regression
-│   ├── 03_transformer_model.ipynb  # Fine-tuning BERT or RoBERTa
-│   ├── 04_evaluation.ipynb         # Evaluation and visualization
-│
-├── requirements.txt
-├── README.md
-└── LICENSE (optional)
+- Data loading  
+- Preprocessing  
+- Visualization of sentiment distribution  
+- Fine-tuning RoBERTa  
+- Fine-tuning T5  
+- Exact evaluation for both models  
+- Refined keyword-based evaluation for T5  
+- Model comparison  
+- Automatic export of the best model  
+- Automatic generation of requirements.txt  
 
-⚙️ Project Objectives
+---
 
-Perform exploratory data analysis (EDA) on tweets
+## 3. How to Reproduce the Experiments
 
-Build a baseline model using classical ML algorithms (Logistic Regression, SVM)
+You can run the notebook either in Colab or locally.
 
-Fine-tune a transformer-based model (BERT, RoBERTa, or DistilBERT)
+### Option 1 – Run in Google Colab (recommended)
 
-Evaluate models using Accuracy, Precision, Recall, and F1-score
+Simply open the notebook using the link above and run all cells.
 
-Provide a reproducible notebook pipeline that can be cloned and executed locally
+### Option 2 – Run locally
 
-🧰 Tech Stack
-Category	Tools
-Language	Python 3.10+
-NLP	Hugging Face Transformers, Datasets, spaCy (optional)
-ML	scikit-learn, PyTorch
-Visualization	Matplotlib, Seaborn
-Environment	Jupyter Notebook, GitHub
-🚀 How to Run
+#### Clone the repository
 
-Clone the repository
-
-git clone https://github.com/<your-username>/twitter-entity-sentiment-analysis.git
-cd twitter-entity-sentiment-analysis
-
-
+```bash
+git clone https://github.com/Abrhm-ma25/Text-classification-algorithm.git
+cd Text-classification-algorithm
+```
 Create a virtual environment
 
-python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
+Linux / macOS:
 
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
 Install dependencies
 
+Install exact versions used during training:
+```bash
+pip install -r requirements.txt
+```
+Run the notebook :
+```bash
+jupyter notebook
+```
+Then open:
+```bash
+FT_Transformers_.ipynb
+```
 
+## 4. Contributors to the repository
+
+kevin.dallaporta@edu.dsti.institute
+
+thomas.barzellino@edu.dsti.institute
+
+abraham.ibitowa@edu.dsti.institute
 
 
